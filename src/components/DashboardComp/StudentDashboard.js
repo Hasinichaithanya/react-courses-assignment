@@ -19,7 +19,6 @@ class StudentDashBoard extends Component {
   };
 
   componentDidMount() {
-    // Retrieve user ID from localStorage on component mount
     const cachedId = localStorage.getItem("user_id");
     if (cachedId) {
       this.setState({ id: cachedId }, () => this.callApi());
@@ -42,7 +41,6 @@ class StudentDashBoard extends Component {
         options
       );
       const data = await response.json();
-      // Initialize isCompleted for each enrollment from cookies
       const isCompleted = {};
       data[0].enrollments.forEach((enrollment) => {
         const cookieValue = Cookies.get(`isCompleted_${enrollment.courseId}`);
@@ -56,7 +54,6 @@ class StudentDashBoard extends Component {
           isLoading: constants.success,
         },
         () => {
-          // Cache user ID in localStorage
           localStorage.setItem("user_id", id);
         }
       );
@@ -75,13 +72,11 @@ class StudentDashBoard extends Component {
 
   handleMarkCompleted = (courseId) => {
     this.setState((prevState) => {
-      // Set isCompleted to true for the specific courseId
       const updatedIsCompleted = {
         ...prevState.isCompleted,
         [courseId]: true,
       };
       console.log(updatedIsCompleted);
-      // Set the cookie to remember isCompleted status
       Cookies.set(`isCompleted_${courseId}`, true);
 
       return { isCompleted: updatedIsCompleted };
