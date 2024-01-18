@@ -1,10 +1,11 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+### `Instructions to run the application`
 
 Go to command line and run the following commands:
 ### mkdir app
+### cd app
 ### git clone https://github.com/Hasinichaithanya/react-courses-assignment/
 ### code .
 the last command opens the code in visual studio code\
