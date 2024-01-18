@@ -1,0 +1,48 @@
+.loading-element {
+  text-align: center;
+}
+.course-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+}
+.course-name {
+  text-align: center;
+}
+.details-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(233, 233, 234);
+  padding: 10px;
+}
+.details-thumbnail {
+  height: 100%;
+  align-self: flex-start;
+  padding: 10px;
+  margin-top: 20px;
+}
+.span-element {
+  font-weight: 600;
+  padding: 10px;
+}
+.details {
+  padding: 10px;
+}
+.syllabus-btn {
+  background-color: transparent;
+  border: none;
+}
+.syllabus-container {
+  list-style-type: none;
+}
+@media (max-width: 800px) {
+  .details-container {
+    flex-direction: column-reverse;
+  }
+  .details-thumbnail {
+    width: 90%;
+    align-self: center;
+  }
+}
