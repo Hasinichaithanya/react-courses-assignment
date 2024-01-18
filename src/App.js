@@ -1,5 +1,4 @@
 import { Switch, Route } from "react-router-dom";
-import Login from "./components/LoginComp/Login";
 import Home from "./components/HomeComp/Home";
 import CourseDetails from "./components/CourseDetailsComp/CourseDetails";
 import StudentDashboard from "./components/DashboardComp/StudentDashboard";
